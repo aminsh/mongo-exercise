@@ -6,7 +6,7 @@ const execute = async () => {
 
   const db = client.db()
 
-  /* const customers = [
+  const customers = [
     {_id: new ObjectId(), name: 'cust-1'},
     {_id: new ObjectId(), name: 'cust-2'}
   ]
@@ -23,7 +23,7 @@ const execute = async () => {
   await db.collection('order').deleteMany({})
 
   await db.collection('customer').insertMany(customers)
-  await db.collection('order').insertMany(orders) */
+  await db.collection('order').insertMany(orders)
 
   const groupByOrdersByCustomer = await db.collection('order').aggregate([
     {
